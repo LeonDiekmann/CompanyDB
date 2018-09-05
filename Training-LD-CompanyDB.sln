@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "CompaynDB", "CompaynDB\CompaynDB.sqlproj", "{A31C803A-688D-4C4B-A0FC-434F913FDB19}"
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "CompanyDB", "CompaynDB\CompanyDB.sqlproj", "{A31C803A-688D-4C4B-A0FC-434F913FDB19}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
