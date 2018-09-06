@@ -57,26 +57,25 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
-    <Folder Include="Tables" />
-    <Folder Include="Views" />
-    <Folder Include="StoredProcedures" />
-    <Folder Include="StoredProcedures\Add" />
-    <Folder Include="StoredProcedures\Update" />
+    <Folder Include="table" />
+    <Folder Include="view" />
+    <Folder Include="storedprocedure" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="tables\Address.sql" />
-    <Build Include="tables\Company.sql" />
-    <Build Include="views\viCompany.sql" />
-    <Build Include="views\viDepartment.sql" />
-    <Build Include="views\viEmployee.sql" />
-    <Build Include="views\viAddress.sql" />
-    <Build Include="tables\Employee2Address.sql" />
-    <Build Include="views\viEmployee2Address.sql" />
-    <Build Include="tables\Company2Address.sql" />
-    <Build Include="views\viCompany2Address.sql" />
+    <Build Include="table\Address.sql" />
+    <Build Include="table\Company.sql" />
+    <Build Include="view\viCompany.sql" />
+    <Build Include="view\viDepartment.sql" />
+    <Build Include="view\viEmployee.sql" />
+    <Build Include="view\viAddress.sql" />
+    <Build Include="table\Employee2Address.sql" />
+    <Build Include="view\viEmployee2Address.sql" />
+    <Build Include="table\Company2Address.sql" />
+    <Build Include="view\viCompany2Address.sql" />
+    <Build Include="storedprocedure\spCompany.sql" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="tables\Department.sql" />
-    <Build Include="tables\Employee.sql" />
+    <Build Include="table\Department.sql" />
+    <Build Include="table\Employee.sql" />
   </ItemGroup>
 </Project>
