@@ -2,13 +2,14 @@
 	@Id INT,
 	@FirstName VARCHAR(256),
 	@LastName VARCHAR(256),
-	@Birthday DATE,
+	@Birthday VARCHAR(256),
+	@Gender INT,
 	@Job VARCHAR(256),
 	@DepartmentId INT
 
 AS
 BEGIN
-	SELECT @Id, @FirstName, @LastName, @Birthday, @Job, @DepartmentId
+	SELECT @Id, @FirstName, @LastName, @Birthday, @Gender, @Job, @DepartmentId
 
 	DECLARE @DBId int
 	Set @DBId = (SELECT Id FROM Employee WHERE Id = @Id)
@@ -18,12 +19,14 @@ BEGIN
 				([FirstName],
 				[LastName],
 				[Birthday],
+				[Gender],
 				[Job],
 				[DepartmentId])
 				VALUES
 				(@FirstName,
 				@LastName,
 				@Birthday,
+				@Gender,
 				@Job,
 				@DepartmentId)
 			SET @DBId = @@IDENTITY
@@ -34,6 +37,7 @@ BEGIN
 			SET [FirstName] = @FirstName,
 			[LastName] = @LastName,
 			[Birthday] = @Birthday,
+			[Gender] = @Gender,
 			[Job] = @Job,
 			[DepartmentId] = @DepartmentId
 			WHERE Id = @Id
