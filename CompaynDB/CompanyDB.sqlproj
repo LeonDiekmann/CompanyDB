@@ -73,6 +73,11 @@
     <Build Include="table\Company2Address.sql" />
     <Build Include="view\viCompany2Address.sql" />
     <Build Include="storedprocedure\spCompany.sql" />
+    <Build Include="storedprocedure\spAddress.sql" />
+    <Build Include="storedprocedure\spDepartment.sql" />
+    <Build Include="storedprocedure\spEmployee.sql" />
+    <Build Include="storedprocedure\spCompany2Address.sql" />
+    <Build Include="storedprocedure\spEmployee2Address.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="table\Department.sql" />
