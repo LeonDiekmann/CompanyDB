@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <Name>CompaynDB</Name>
+    <Name>CompanyDB</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
     <ProjectGuid>{a31c803a-688d-4c4b-a0fc-434f913fdb19}</ProjectGuid>
-    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
@@ -57,5 +57,25 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="table" />
+    <Folder Include="view" />
+    <Folder Include="storedprocedure" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="table\Address.sql" />
+    <Build Include="table\Company.sql" />
+    <Build Include="view\viCompany.sql" />
+    <Build Include="view\viDepartment.sql" />
+    <Build Include="view\viEmployee.sql" />
+    <Build Include="view\viAddress.sql" />
+    <Build Include="table\Employee2Address.sql" />
+    <Build Include="view\viEmployee2Address.sql" />
+    <Build Include="table\Company2Address.sql" />
+    <Build Include="view\viCompany2Address.sql" />
+    <Build Include="storedprocedure\spCompany.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="table\Department.sql" />
+    <Build Include="table\Employee.sql" />
   </ItemGroup>
 </Project>
