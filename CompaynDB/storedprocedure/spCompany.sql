@@ -1,6 +1,6 @@
 ﻿CREATE PROCEDURE [dbo].[spCompany]
-	@Id INT,
-	@name VARCHAR(256)
+	@Id INT = NULL,
+	@name VARCHAR(256) = NULL
 AS
 BEGIN
 	SELECT @name, @Id
@@ -18,7 +18,7 @@ BEGIN
 	else
 		begin
 			UPDATE [dbo].[Company]
-			SET [Name] = @Name
+			SET [Name] = case when @name is null then name else @name end
 			WHERE Id = @Id
 		end
 	SELECT @DBId

@@ -1,10 +1,10 @@
 ﻿CREATE PROCEDURE [dbo].[spAddress]
 	@Id INT = NULL,
 	@PostCode INT = NULL,
-	@City VARCHAR(128),
-	@Street VARCHAR(128),
-	@HouseNumber VARCHAR(128),
-	@Country VARCHAR(128)
+	@City VARCHAR(128) = NULL,
+	@Street VARCHAR(128) = NULL,
+	@HouseNumber INT = NULL,
+	@Country VARCHAR(128) = NULL
 AS
 BEGIN
 
@@ -32,10 +32,10 @@ BEGIN
 			UPDATE [dbo].[Address]
 			SET 
 				[PostCode] =	case when @PostCode is null then PostCode else @PostCode end,
-				[City] =		@City,
-				[Street] =		@Street,
-				[HouseNumber] = @HouseNumber,
-				[Country] =		@Country
+				[City] =		case when @City is null then City else @City end,
+				[Street] =		case when @Street is null then Street else @Street end,
+				[HouseNumber] = case when @HouseNumber is null then HouseNumber else @HouseNumber end,
+				[Country] =		case when @Country is null then Country else @Country end
 			WHERE Id =			@Id
 		end
 	SELECT @DBId

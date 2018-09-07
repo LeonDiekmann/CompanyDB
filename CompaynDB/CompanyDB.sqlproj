@@ -60,6 +60,7 @@
     <Folder Include="table" />
     <Folder Include="view" />
     <Folder Include="storedprocedure" />
+    <Folder Include="function" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="table\Address.sql" />
@@ -69,15 +70,14 @@
     <Build Include="view\viEmployee.sql" />
     <Build Include="view\viAddress.sql" />
     <Build Include="table\Employee2Address.sql" />
-    <Build Include="view\viEmployee2Address.sql" />
     <Build Include="table\Company2Address.sql" />
-    <Build Include="view\viCompany2Address.sql" />
     <Build Include="storedprocedure\spCompany.sql" />
     <Build Include="storedprocedure\spAddress.sql" />
     <Build Include="storedprocedure\spDepartment.sql" />
     <Build Include="storedprocedure\spEmployee.sql" />
     <Build Include="storedprocedure\spCompany2Address.sql" />
     <Build Include="storedprocedure\spEmployee2Address.sql" />
+    <Build Include="function\fnGender.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="table\Department.sql" />

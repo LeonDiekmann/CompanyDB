@@ -11,3 +11,4 @@ BEGIN
 			WHEN 2 THEN 'kompliziert'
 			ELSE 'Nicht Definiert'
 END
+END
