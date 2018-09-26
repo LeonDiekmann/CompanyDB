@@ -78,6 +78,7 @@
     <Build Include="storedprocedure\spCompany2Address.sql" />
     <Build Include="storedprocedure\spEmployee2Address.sql" />
     <Build Include="function\fnGender.sql" />
+    <Build Include="storedprocedure\spCompanyDelete.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="table\Department.sql" />

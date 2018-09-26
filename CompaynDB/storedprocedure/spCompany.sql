@@ -1,9 +1,9 @@
 ﻿CREATE PROCEDURE [dbo].[spCompany]
-	@Id INT = NULL,
-	@name VARCHAR(256) = NULL
+	@Id INT = -1,
+	@Name VARCHAR(256) = NULL
 AS
 BEGIN
-	SELECT @name, @Id
+	SELECT @Name, @Id
 
 	DECLARE @DBId int
 	Set @DBId = (SELECT Id FROM Company WHERE Id = @Id)
@@ -18,10 +18,11 @@ BEGIN
 	else
 		begin
 			UPDATE [dbo].[Company]
-			SET [Name] = case when @name is null then name else @name end
+			SET [Name] = case when @Name is null then name else @Name end
 			WHERE Id = @Id
 		end
-	SELECT @DBId
-	RETURN @DBId
+	return @DBId
 END
-GO;
+--SELECT Id, Name,PostCode, City, Street, HouseNumber, Country 
+--			FROM viCompany 
+--			WHERE Id = COALESCE(@DBId, @Id)
